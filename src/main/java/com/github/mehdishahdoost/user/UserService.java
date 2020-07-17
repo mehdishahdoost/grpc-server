@@ -21,6 +21,7 @@ public class UserService extends userGrpc.userImplBase {
             response.setResponseCode(100).setResponseMessage("FAILED");
         }
         responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
     }
 
     @Override
